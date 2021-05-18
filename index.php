@@ -77,10 +77,10 @@ error_reporting(E_ALL);
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="form-lieu">
+        <form id="form-lieu" onsubmit="return false">
           <div class="mb-3">
             <label for="nom" class="col-form-label">Nom du lieu:</label>
-            <input type="text" name="nom" class="form-control" id="nom">
+            <input type="text" name="nom" class="form-control" id="nom" required onclick="validerNom(this)">
           </div>
           <div class="mb-3">
             <label for="description" class="col-form-label">Description du lieu:</label>
@@ -110,13 +110,13 @@ error_reporting(E_ALL);
                           <p>De</p>
                         </div>
                         <div class='col-5'>
-                          <p><input type='time' class='form-control' name='heure". $i ."' id='heure". $i ."' placeholder='hh:mm'></p>
+                          <p><input type='time' class='form-control' name='heure". $i ."' id='heure". $i ."' placeholder='hh:mm' onchange='validerHeureMatin(this)'></p>
                         </div>
                         <div class='col-1 d-flex justify-content-center'>
                           <p>à</p>
                         </div>
                         <div class='col-5'>
-                          <p><input type='text' class='form-control' name='heure". $i1 ."' id='heure". $i1 ."' placeholder='hh:mm'></p>
+                          <p><input type='time' class='form-control' name='heure". $i1 ."' id='heure". $i1 ."' placeholder='hh:mm'></p>
                         </div>
                       </div>
                     </div>
@@ -126,13 +126,13 @@ error_reporting(E_ALL);
                           <p>De</p>
                         </div>
                         <div class='col-5'>
-                          <p><input type='text' class='form-control' name='heure". $i2 ."' id='heure". $i2 ."' placeholder='hh:mm'></p>
+                          <p><input type='time' class='form-control' name='heure". $i2 ."' id='heure". $i2 ."' placeholder='hh:mm'></p>
                         </div>
                         <div class='col-1 d-flex justify-content-center'>
                           <p>à</p>
                         </div>
                         <div class='col-5'>
-                          <p><input type='text' class='form-control' name='heure". $i3 ."' id='heure". $i3 ."' placeholder='hh:mm'></p>
+                          <p><input type='time' class='form-control' name='heure". $i3 ."' id='heure". $i3 ."' placeholder='hh:mm'></p>
                         </div>
                       </div>
                     </div>
@@ -144,18 +144,19 @@ error_reporting(E_ALL);
         ?>
           <div class="mb-3">
             <label for="lat" class="col-form-label">Latitude</label>
-            <input type="number" step="0.001" name="latitude" class="form-control" id="lat">
+            <input type="number" step="0.000000000000001" name="latitude" class="form-control" id="lat">
           </div>
           <div class="mb-3">
             <label for="lng" class="col-form-label">Longitude</label>
-            <input type="number" name="longitude" step="0.001" class="form-control" id="lng">
+            <input type="number" name="longitude" step="0.000000000000001" class="form-control" id="lng">
           </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" onclick="envoyerFormulaireAjoutLieu()">Valider formulaire</button>
+      </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="envoyerFormulaireAjoutLieu()">Valider formulaire</button>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -171,23 +172,40 @@ error_reporting(E_ALL);
 
 <script>
 
+const formAjoutLieu = true;
+
 function envoyerFormulaireAjoutLieu(){
 
   $data = $('#form-lieu').serialize()
+  if (formAjoutLieu){
+    $.ajax({
+      type: "POST",
+      url: "/laQueteDeLaVille/inc/ajouterLieu.inc.php",
+      data: $data,
+      dataType: 'html',
+      // error: function(xhr, status, error){
+      //      var errorMessage = xhr.status + ': ' + xhr.statusText
+      //      alert('Error - ' + errorMessage);
+      //  },
+      success: function(data){
+        console.log(data);
+      }
+    });
+}
+}
 
-  $.ajax({
-    type: "POST",
-    url: "/cityQuest/inc/ajouterLieu.inc.php",
-    data: $data,
-    dataType: 'html',
-    error: function(xhr, status, error){
-         var errorMessage = xhr.status + ': ' + xhr.statusText
-         alert('Error - ' + errorMessage);
-     },
-     success: function(data){
-       console.log(data);
-     }
-  });
+function validerNom(){
+  if(this.val == ""){
+    formAjoutLieu = false;
+  }else{
+    formAjoutLieu = true;
+  }
+}
+
+function validerHeureMatin(element){
+  var hour = '' + element.value[0] + element.value[1];
+  var minute = '' + element.value[3] + element.value[4];
+  console.log(hour + ' ' + minute);
 }
 
 </script>

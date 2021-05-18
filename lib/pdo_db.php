@@ -24,10 +24,6 @@ class Database {
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION 
 		);
 		// Create a new PDO instanace
-			
-		$servername = "db5002513231.hosting-data.io";
-		$username = "dbu113413";
-		$password = "Alcidealcide08";
 
 		try {
 			$this->dbh = new PDO ($dsn, $this->user, $this->pass, $options);

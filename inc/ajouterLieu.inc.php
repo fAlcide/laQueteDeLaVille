@@ -10,8 +10,6 @@ require_once('../models/Lieu.php');
 
 $lieu = new Lieu();
 
-print_r($_POST);
-
 $nom = $_POST["nom"];
 $description = $_POST["description"];
 $type = $_POST["type"];
