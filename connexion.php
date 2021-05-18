@@ -54,15 +54,15 @@ body {
 
 </style>
 
-<form class="form-signin text-center" type="PSOT" action="connexion.inc.php ">
+<form class="form-signin text-center" type="PSOT" action="inc/connexion.inc.php ">
       <img class="mb-1" src="img/cityQuest.svg" alt=""  height="72">
       <h1 class="h3 mb-3 display-6 text-secondary">Connexion</h1>
       <hr>
       
       <label for="inputEmail" class="sr-only">Adresse email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Adresse email" required autofocus>
+      <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Adresse email" required autofocus>
       <label for="inputPassword" class="sr-only">Mot de passe</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+      <input type="password" id="inputPassword"  name="pwd" class="form-control" placeholder="Mot de passe" required>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Se souvenir de moi
@@ -74,6 +74,25 @@ body {
 
 <?php
 
-  if(isset($_GET[])){}
+  if(isset($_GET['error'])){
+    if($_GET["error"] == "emptyinput"){
+      echo "<p>Fill in all fields!</p>";
+    }
+    else if($_GET["error"] == "invalidemail"){
+      echo "<p>Choose a proper email!</p>";
+    }
+    else if($_GET["error"] == "pwddontmatch"){
+      echo "<p>Password dosen't match</p>";
+    }
+    else if($_GET["error"] == "stmtfield"){
+      echo "<p>Somethog went wrong, try egain.</p>";
+    }
+    else if($_GET["error"] == "username"){
+      echo "<p>Choose a proper username!</p>";
+    }
+    else if($_GET["error"] == "usernametaken"){
+      echo "<p>Choose a proper username!</p>";
+    }
+  }
 
 ?>

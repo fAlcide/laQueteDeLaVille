@@ -62,26 +62,54 @@ body {
 
 </style>
 
-<form class="form-signin text-center">
+<form class="form-signin text-center" method="POST" action="inc/inscription.inc.php">
       <img class="mb-1" src="img/cityQuest.svg" alt=""  height="72">
       <h1 class="h3 mb-3 display-6 text-secondary">Inscription</h1>
       <hr>
       
       <label for="inputEmail" class="sr-only " >Adresse email</label>
-      <input type="email" id="inputEmail" class="form-control top" placeholder="Adresse email" required>
+      <input type="email" id="inputEmail" name="email" class="form-control top" placeholder="Adresse email" required>
       <label for="inputPassword" class="sr-only middle">Mot de passe</label>
-      <input type="password" id="inputPassword" class="form-control middle" placeholder="Mot de passe" required >
+      <input type="password" id="inputPassword" name="pwd" class="form-control middle" placeholder="Mot de passe" required >
       <label for="inputPassword" class="sr-only middle">Confirmer le mot de passe</label>
-      <input type="password" id="inputPassword" class="form-control middle" placeholder="Confirmer le mot de passe" required >
+      <input type="password" id="inputPassword" name="repeat" class="form-control middle" placeholder="Confirmer le mot de passe" required >
       <label for="inputEmail" class="sr-only ">Nom</label>
-      <input type="text" id="inputEmail " class="form-control middle" placeholder="Nom" required>
+      <input type="text" id="inputEmail " name="nom" class="form-control middle" placeholder="Nom" required>
       <label for="inputPassword" class="sr-only">Prénom</label>
-      <input type="text" id="inputPassword" class="form-control bottom" placeholder="Prénom" required >
+      <input type="text" id="inputPassword" name="prenom" class="form-control bottom" placeholder="Prénom" required >
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Se souvenir de moi
         </label>
       </div>
-      <button class="btn btn-lg btn-danger btn-block rounded-pill w-100" type="submit">S'inscrire</button>
+      <button class="btn btn-lg btn-danger btn-block rounded-pill w-100" name="submit" type="submit">S'inscrire</button>
       <p class="my-5 text-center text-secondary"><small>© City<b class="text-danger">Quest</b> 2020 - Tous Droits Réservés</small>
     </form>
+
+    <?php
+
+  if(isset($_GET['error'])){
+    if($_GET["error"] == "emptyinput"){
+      echo "<p>Fill in all fields!</p>";
+    }
+    if($_GET["error"] == "none"){
+      echo "<p>Tout va bien</p>";
+    }
+    else if($_GET["error"] == "invalidemail"){
+      echo "<p>Choose a proper email!</p>";
+    }
+    else if($_GET["error"] == "pwddontmatch"){
+      echo "<p>Password dosen't match</p>";
+    }
+    else if($_GET["error"] == "stmtfield"){
+      echo "<p>Somethog went wrong, try egain.</p>";
+    }
+    else if($_GET["error"] == "username"){
+      echo "<p>Choose a proper username!</p>";
+    }
+    else if($_GET["error"] == "emailtoken"){
+      echo "<p>An account is already linked to this email!</p>";
+    }
+  }
+
+?>

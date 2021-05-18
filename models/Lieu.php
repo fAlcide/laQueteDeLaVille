@@ -17,8 +17,7 @@
       $this->db->bind(':lon', $data['lon']);
       $this->db->bind(':lat', $data['lat']);
       $this->db->bind(':horraire', $data['horraire']);
-
-      echo "INSERT INTO Lieu (`nom`,`description`, `type`, `lon`, `lat`, `horraire`) VALUES(" . $data['nom'] . ", " . $data['description'] . ", " . $data['type'] . ", " . $data['lon'] . ", " . $data['lat'] . ", " . $data['horraire'] . ")";
+      
       // Execute
       if($this->db->execute()) {
         return true;
