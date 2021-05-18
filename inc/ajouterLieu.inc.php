@@ -4,12 +4,17 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+
 require_once('../config/db.php');
 require_once('../lib/pdo_db.php');
 require_once('../models/Lieu.php');
 
 $lieu = new Lieu();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 021ad08f46fcbbe22ca4d7d533e6186ce1a21e57
 $nom = $_POST["nom"];
 $description = $_POST["description"];
 $type = $_POST["type"];

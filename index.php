@@ -1,65 +1,31 @@
-<?php
+<?php require_once("inc/header.inc.php"); ?>
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-  require_once('config/db.php');
-  require_once('lib/pdo_db.php');
-  require_once('models/Lieu.php');
-
-  // Instantiate Customer
-  $lieu = new Lieu();
-
-  // Get Customer
-  $lieux = $lieu->getLieux();
-
-  //print_r($lieux);
-?>
-
-<!doctype html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="inc/jquery.min.js"></script>
-
-    <title>CityQuest</title>
-
-    <script>
-    const points = [
-      { lat: 50.276660426917786, lng:  3.9838389473130937},
-      { lat: 50.27771091219929, lng: 3.973816296130853},
-      { lat: 50.26887064904313, lng: 3.980021438332493},
-      { lat: 50.276807514841735, lng: 3.977093806129458}
-    ];
-    
-    </script>
-    <script src=" js/app.js"></script>
-    <script src="inc/jquery.min.js"></script>
-    <link rel="icon" type="image/png" href="img/map.png">
-    <link rel="stylesheet" href="css/master.css">
-</head>
-
-<body>
-
-<nav class="navbar navbar-expand-md navbar-light border-bottom">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="img/map.png" alt="" width="30">
-            </button>
-            <div class="collapse navbar-collapse justify-content-center">
-                <div class="navbar-nav">
-                    <a class="nav-link px-4" href="#">Présentation</a>
-                    <a class="nav-link px-4" href="#">Data Sheets</a>
-                    <a class="nav-link px-4" href="#"><img src="img/map.png" alt="" width="30"></a>
-                    <a class="nav-link px-4" href="#">Graphiques</a>
-                    <a class="nav-link px-4" href="#">GitHub</a>
-                    <a class="nav-link px-4" href="#"></a>
+<div class="container">
+    <div class="row align-items-center border-bottom">
+        <div class="col-lg-6 text-lg-start text-center col-12 my-5">
+            <h1 class="display-3">CityQuest, la solution pour comprendre la ville</h1>
+            <p class="lead text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="row mt-5 justify-content-center justify-content-lg-start">
+                    <button class="btn btn-danger btn-lg rounded-pill col-6">Commencer gratuitement</button>
+            </div>
+        </div>
+        <div class="col-lg-6  d-lg-block d-none">
+            <img src="img/gummy-city.svg" class="img-fluid" alt="">
+        </div>
+    </div>
+    <div class="row border-bottom">
+        <div class="col-md-4  col-12">
+            <div class="card text-center my-5 border-0">
+                <div class="col d-flex justify-content-center">
+                <img src="img/no-racism.svg" class="w-50 p-4" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Service efficace</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </nav>
 
     <div id="map"></div>
@@ -157,10 +123,48 @@ error_reporting(E_ALL);
         </form>
       </div>
       
+=======
+        <div class="col-md-4  col-12">
+            <div class="card text-center my-5 border-0">
+                <div class="col d-flex justify-content-center">
+                <img src="img/protection.svg" class="w-50 p-4" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Service efficace</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4  col-12">
+            <div class="card text-center my-5 border-0">
+                <div class="col d-flex justify-content-center">
+                <img src="img/reliability.svg" class="w-50 p-4" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Service efficace</h5>
+                    <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    <div class="row text-center my-5 border-bottom">
+        <h1 class="display-6">CityQuest, la solution pour comprendre la ville</h1>
+        <p class="lead mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.</p>
+    </div>
+    <div class="row my-5 border-bottom">
+        <div class="col-6">
+            <h1 class="">CityQuest, la solution pour comprendre la ville</h1>
+            <p class=" mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.</p>
+        </div>
+        <div class="col-6">
+            <h1 class="">CityQuest, la solution pour comprendre la ville</h1>
+            <p class=" mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.</p>
+        </div>
+>>>>>>> 021ad08f46fcbbe22ca4d7d533e6186ce1a21e57
+    </div>
 </div>
 
+<<<<<<< HEAD
     <!-- Fin Modal ajout point -->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3yGqmW1Zx7YOQxbtIPi8paSQKouzyhF8&callback=initMap&libraries=&v=weekly" async></script>
@@ -210,3 +214,6 @@ function validerHeureMatin(element){
 
 </script>
 
+=======
+<?php require_once("inc/footer.inc.php"); ?>
+>>>>>>> 021ad08f46fcbbe22ca4d7d533e6186ce1a21e57
