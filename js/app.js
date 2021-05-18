@@ -67,3 +67,23 @@ function downloadUrl(url, callback) {
 }
 
 function doNothing() {}
+
+
+function envoyerFormulaireAjoutLieu(){
+
+  $data = $('#form-lieu').serialize()
+
+  $.ajax({
+    type: "POST",
+    url: "/cityQuest/inc/ajouterLieu.inc.php",
+    data: $data,
+    dataType: 'html',
+    error: function(xhr, status, error){
+         var errorMessage = xhr.status + ': ' + xhr.statusText
+         alert('Error - ' + errorMessage);
+     },
+     success: function(data){
+       console.log(data);
+     }
+  });
+}
