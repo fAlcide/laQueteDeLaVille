@@ -1,4 +1,5 @@
 <?php require_once("inc/header.inc.php"); ?>
+<?php require_once("inc/navbar.inc.php"); ?>
 
 <div class="container">
     <div class="row align-items-center border-bottom">
@@ -6,7 +7,7 @@
             <h1 class="display-3">CityQuest, la solution pour comprendre la ville</h1>
             <p class="lead text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <div class="row mt-5 justify-content-center justify-content-lg-start">
-                    <button class="btn btn-danger btn-lg rounded-pill col-6">Commencer gratuitement</button>
+                    <button class="btn btn-danger btn-lg rounded-pill col-xl-6 col-lg-12 col-6">Commencer gratuitement</button>
             </div>
         </div>
         <div class="col-lg-6  d-lg-block d-none">
@@ -52,7 +53,7 @@
         <h1 class="display-6">CityQuest, la solution pour comprendre la ville</h1>
         <p class="lead mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.</p>
     </div>
-    <div class="row my-5 border-bottom">
+    <div class="row my-5">
         <div class="col-6">
             <h1 class="">CityQuest, la solution pour comprendre la ville</h1>
             <p class=" mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.</p>
