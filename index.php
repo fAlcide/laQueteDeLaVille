@@ -1,4 +1,5 @@
 <?php require_once("inc/header.inc.php"); ?>
+<?php require_once("inc/navbar.inc.php"); ?>
 
 <div class="container">
     <div class="row align-items-center border-bottom">
@@ -52,7 +53,7 @@
         <h1 class="display-6">CityQuest, la solution pour comprendre la ville</h1>
         <p class="lead mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.</p>
     </div>
-    <div class="row my-5 border-bottom">
+    <div class="row my-5">
         <div class="col-6">
             <h1 class="">CityQuest, la solution pour comprendre la ville</h1>
             <p class=" mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem excepturi fuga nisi officia voluptates adipisci, doloribus, quis ducimus ipsum consequatur ab minus quidem sapiente numquam, porro aliquam. Eum, reprehenderit itaque.</p>
