@@ -41,15 +41,23 @@ body {
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[type="email"] {
+.top {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-signin input[type="password"] {
+.bottom {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.middle {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: -1px;
 }
 
 </style>
@@ -59,14 +67,16 @@ body {
       <h1 class="h3 mb-3 display-6 text-secondary">Inscription</h1>
       <hr>
       
-      <label for="inputEmail" class="sr-only">Adresse email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Adresse email" required>
-      <label for="inputPassword" class="sr-only">Mot de passe</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required >
-      <label for="inputEmail" class="sr-only">Adresse email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Adresse email" required>
-      <label for="inputPassword" class="sr-only">Mot de passe</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required >
+      <label for="inputEmail" class="sr-only " >Adresse email</label>
+      <input type="email" id="inputEmail" class="form-control top" placeholder="Adresse email" required>
+      <label for="inputPassword" class="sr-only middle">Mot de passe</label>
+      <input type="password" id="inputPassword" class="form-control middle" placeholder="Mot de passe" required >
+      <label for="inputPassword" class="sr-only middle">Confirmer le mot de passe</label>
+      <input type="password" id="inputPassword" class="form-control middle" placeholder="Confirmer le mot de passe" required >
+      <label for="inputEmail" class="sr-only ">Nom</label>
+      <input type="text" id="inputEmail " class="form-control middle" placeholder="Nom" required>
+      <label for="inputPassword" class="sr-only">Prénom</label>
+      <input type="text" id="inputPassword" class="form-control bottom" placeholder="Prénom" required >
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Se souvenir de moi

@@ -13,4 +13,5 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     background:none !important;
 }
 
+button:focus { outline:0 !important; }
 
