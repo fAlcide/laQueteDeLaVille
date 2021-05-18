@@ -11,10 +11,6 @@ require_once('../models/Lieu.php');
 
 $lieu = new Lieu();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 021ad08f46fcbbe22ca4d7d533e6186ce1a21e57
 $nom = $_POST["nom"];
 $description = $_POST["description"];
 $type = $_POST["type"];

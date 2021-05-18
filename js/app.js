@@ -75,7 +75,7 @@ function envoyerFormulaireAjoutLieu(){
 
   $.ajax({
     type: "POST",
-    url: "/cityQuest/inc/ajouterLieu.inc.php",
+    url: "/laQueteDeLaVille/inc/ajouterLieu.inc.php",
     data: $data,
     dataType: 'html',
     error: function(xhr, status, error){
