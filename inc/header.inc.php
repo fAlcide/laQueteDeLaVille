@@ -10,21 +10,6 @@
       <script src="inc/jquery.min.js"></script>
       <link rel="icon" type="image/png" href="img/cQ.svg">
       <link rel="stylesheet" href="css/master.css">
+      <script src="https://kit.fontawesome.com/8e5a240d2c.js" crossorigin="anonymous"></script>
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-light border-bottom">
-          <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <img src="img/cQ.svg" alt="" width="30">
-              </button>
-              <div class="collapse navbar-collapse justify-content-center">
-                  <div class="navbar-nav">
-                      <a class="nav-link px-4 my-auto" href="index.php">ACCUEIL</a>
-                      <a class="nav-link px-4 my-auto" href="dashboard.php">DASHBOARD</a>
-                      <a class="nav-link px-4 my-auto" href="index.php"><img src="img/cityQuest.svg" alt="" height="50"></a>
-                      <a class="nav-link px-4 my-auto" href="https://github.com/fAlcide/laQueteDeLaVille">GITHUB</a>
-                      <a class="nav-link px-4 my-auto" href="connexion.php">CONNEXION</a>
-                  </div>
-              </div>
-          </div>
-      </nav>

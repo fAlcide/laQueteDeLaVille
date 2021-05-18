@@ -54,7 +54,7 @@ body {
 
 </style>
 
-<form class="form-signin text-center">
+<form class="form-signin text-center" type="PSOT" action="connexion.inc.php ">
       <img class="mb-1" src="img/cityQuest.svg" alt=""  height="72">
       <h1 class="h3 mb-3 display-6 text-secondary">Connexion</h1>
       <hr>
@@ -70,4 +70,10 @@ body {
       </div>
       <button class="btn btn-lg btn-danger btn-block rounded-pill w-100" type="submit">Se connecter</button>
       <p class="my-5 text-center text-secondary"><small>© City<b class="text-danger">Quest</b> 2020 - Tous Droits Réservés</small>
-    </form>
+</form> 
+
+<?php
+
+  if(isset($_GET[])){}
+
+?>
